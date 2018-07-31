@@ -38,23 +38,23 @@ void do_IR_Tick()
   {
     if(IRresults.value==IR_ADVANCE)
     {
-      Drive_Num=GO_ADVANCE;
+      //How would you make the robot advance?
     }
     else if(IRresults.value==IR_RIGHT)
     {
-       Drive_Num=GO_RIGHT;
+       //go right?
     }
     else if(IRresults.value==IR_LEFT)
     {
-       Drive_Num=GO_LEFT;
+       //maybe this involves the drive?
     }
     else if(IRresults.value==IR_BACK)
     {
-        Drive_Num=GO_BACK;
+        //how is that controlled?
     }
     else if(IRresults.value==IR_STOP)
     {
-        Drive_Num=STOP_STOP;
+        //maybe some kind of num?
     }
     IRresults.value = 0;
     IR.resume();
@@ -80,14 +80,15 @@ void do_Drive_Tick()
       JogTime=millis();
       if(JogFlag == true) 
       {
-        stopFlag = false;
+        stopFlag = //do we want to stop while we're jogging?
         if(JogTimeCnt <= 0) 
         {
-          JogFlag = false; stopFlag = true;
+          JogFlag = //are we stopped or jogging when JogTimeCnt <=0? 
+          stopFlag = //how would we set these flags to accomplish that?
         }
         JogTimeCnt--;
       }
-      if(stopFlag == true) 
+      if(stopFlag == //hmmmmmmmmmm......)
       {
         JogTimeCnt=0;
         stop_Stop();
